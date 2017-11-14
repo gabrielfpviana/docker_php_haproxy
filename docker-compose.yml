@@ -19,47 +19,24 @@ services:
        - PHP_PORT=80
       networks: 
        httpnetwork:
-         ipv4_address: 172.30.5.30
-
-    nginx1: 
-      image: nginx 
-      volumes: 
-       - ./nginx1/conf.d:/etc/nginx/conf.d
-       - /www:/var/www
-      ports: 
-       - "8091:80"
-      environment: 
-       - NGINX_HOST=nginx1
-       - NGINX_PORT=80
-      networks: 
-       httpnetwork:
-         ipv4_address: 172.30.5.2
-
-    nginx2:
-      image: nginx
-      volumes:
-       - ./nginx2/conf.d:/etc/nginx/conf.d
-       - /www:/var/www
-      ports:
-       - "8092:80"
-      environment:
-       - NGINX_HOST=nginx2
-       - NGINX_PORT=80
-      networks:
-       httpnetwork:
          ipv4_address: 172.30.5.3
          
-    nginx3:
-      image: nginx
+    php2: 
+      dockerfile: Dockerfile 
       volumes:
-       - ./nginx3/conf.d:/etc/nginx/conf.d
-       - /www:/var/www
+        - .:/var/www/html
+        - /etc/timezone:/etc/timezone
+        - /etc/localtime:/etc/localtime
+
+      build: .
+      expose:
+        - "80"
       ports:
-       - "8093:80"
-      environment:
-       - NGINX_HOST=nginx3
-       - NGINX_PORT=80
-      networks:
+        - "8081:80"
+      environment: 
+       - PHP_HOST=php2
+       - PHP_PORT=80
+      networks: 
        httpnetwork:
          ipv4_address: 172.30.5.4
          
