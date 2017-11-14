@@ -3,13 +3,11 @@ version: '2'
 services:
 
     php1: 
-      dockerfile: Dockerfile 
+      image: tutum/lamp 
       volumes:
         - .:/var/www/html
         - /etc/timezone:/etc/timezone
         - /etc/localtime:/etc/localtime
-
-      build: .
       expose:
         - "80"
       ports:
@@ -22,13 +20,11 @@ services:
          ipv4_address: 172.30.5.3
          
     php2: 
-      dockerfile: Dockerfile 
+      image: tutum/lamp  
       volumes:
         - .:/var/www/html
         - /etc/timezone:/etc/timezone
         - /etc/localtime:/etc/localtime
-
-      build: .
       expose:
         - "80"
       ports:
