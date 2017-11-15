@@ -1,7 +1,6 @@
-version: "3"
+version: '2'
 services:
-
-    php:
+     php:
       build: .
       ports:
        - "80:80"
@@ -9,11 +8,11 @@ services:
       volumes:
        - ./www:/var/www/html
       networks:
-       phpnetwork:
-          ipv4_address: 172.30.5.2
-          
+       httpnetwork:
+         ipv4_address: 172.30.5.3
+
 networks:
- httpnetwork:
+ phpnetwork:
   driver: bridge
   ipam:
    config:
