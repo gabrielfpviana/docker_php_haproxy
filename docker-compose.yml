@@ -1,5 +1,6 @@
 version: "3"
 services:
+
     php:
       build: .
       ports:
@@ -9,13 +10,14 @@ services:
        - ./www:/var/www/html
       networks:
        phpnetwork:
-          ipv4_address: 172.30.1.2
+          ipv4_address: 172.30.5.2
+          
 networks:
-  phpnetwork:
-   driver: bridge
-   ipam:
-    config:
-      - subnet: 172.30.1.0/24
-        gateway: 172.30.1.1
+ httpnetwork:
+  driver: bridge
+  ipam:
+   config:
+    - subnet: 172.30.5.0/24
+      gateway: 172.30.5.254
     
         
