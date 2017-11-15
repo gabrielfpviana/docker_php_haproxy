@@ -1,2 +1,2 @@
-FROM tutum/lamp
-MAINTAINER PAAS EMAIL gabriel.viana@gmail.com
+FROM php:5.6-apache
+RUN docker-php-ext-install mysqli
