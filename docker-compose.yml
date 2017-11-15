@@ -1,6 +1,6 @@
-version: '2'
+version: '3'
 services:
-     php:
+     php1:
       build: .
       ports:
        - "80:80"
@@ -8,8 +8,33 @@ services:
       volumes:
        - ./www:/var/www/html
       networks:
-       httpnetwork:
+       phpnetwork:
          ipv4_address: 172.30.5.3
+        
+        
+     php2:
+      build: .
+      ports:
+       - "80:80"
+       - "443:443"
+      volumes:
+       - ./www:/var/www/html
+      networks:
+       phpnetwork:
+         ipv4_address: 172.30.5.4
+         
+     php3:
+      build: .
+      ports:
+       - "80:80"
+       - "443:443"
+      volumes:
+       - ./www:/var/www/html
+      networks:
+       phpnetwork:
+         ipv4_address: 172.30.5.5
+
+
 
 networks:
  phpnetwork:
