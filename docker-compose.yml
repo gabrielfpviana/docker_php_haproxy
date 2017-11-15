@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
      php1:
       build: .
@@ -9,8 +9,7 @@ services:
        - ./www:/var/www/html
       networks:
        phpnetwork:
-         ipv4_address: 172.30.5.3
-        
+         ipv4_address: 172.30.5.3       
         
      php2:
       build: .
@@ -42,8 +41,8 @@ services:
       ports:
        - "8100:80"
       networks:
-        phpnetwork:
-         ipv4_address: 172.30.5.10
+       phpnetwork:
+         ipv4_address: 172.30.5.5
 
 networks:
  phpnetwork:
