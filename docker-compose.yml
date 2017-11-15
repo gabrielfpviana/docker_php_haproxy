@@ -3,7 +3,7 @@ services:
      php1:
       build: .
       ports:
-       - "80:80"
+       - "81:80"
        - "443:443"
       volumes:
        - ./www:/var/www/html
@@ -15,7 +15,7 @@ services:
      php2:
       build: .
       ports:
-       - "80:80"
+       - "82:80"
        - "443:443"
       volumes:
        - ./www:/var/www/html
@@ -26,15 +26,24 @@ services:
      php3:
       build: .
       ports:
-       - "80:80"
+       - "83:80"
        - "443:443"
       volumes:
        - ./www:/var/www/html
       networks:
        phpnetwork:
          ipv4_address: 172.30.5.5
-
-
+         
+     haproxy1: 
+       image: haproxy:1.7
+       volumes:
+        - ./haproxy1/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+        - ./haproxy1/conf.d:/usr/local/etc/haproxy/conf.d
+       ports:
+        - "8100:80"
+       networks:
+        httpnetwork:
+          ipv4_address: 172.30.5.10
 
 networks:
  phpnetwork:
