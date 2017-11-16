@@ -57,9 +57,6 @@ services:
       environment:
        - MYSQL_ROOT_PASSWPRD=projeto
        - MYSQL_DATABASE=projeto
-      networks:
-       phpnetwork:
-         ipv4_address: 172.30.5.7
          
 networks:
  phpnetwork:
