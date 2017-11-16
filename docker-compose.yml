@@ -49,6 +49,7 @@ services:
       networks:
        phpnetwork:
 <<<<<<< HEAD
+<<<<<<< HEAD
          ipv4_address: 172.30.5.6
          
       db:
@@ -60,6 +61,8 @@ services:
         - MYSQL_DATABASE=projeto
          
 =======
+=======
+>>>>>>> parent of acfb359... Projeto funcionando
          ipv4_address: 172.30.5.5
 
 >>>>>>> parent of acfb359... Projeto funcionando
