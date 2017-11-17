@@ -7,8 +7,8 @@ services:
        - "443:443"
       volumes:
        - ./www:/var/www/html
-      links:
-       - db
+#      links:
+#       - db
       networks:
        phpnetwork:
          ipv4_address: 172.30.5.3       
@@ -20,8 +20,8 @@ services:
        - "443:443"
       volumes:
        - ./www:/var/www/html
-      links:
-       - db
+#      links:
+#       - db
       networks:
        phpnetwork:
          ipv4_address: 172.30.5.4
@@ -33,8 +33,8 @@ services:
        - "443:443"
       volumes:
        - ./www:/var/www/html
-      links:
-       - db
+#      links:
+#       - db
       networks:
        phpnetwork:
          ipv4_address: 172.30.5.5
@@ -48,24 +48,17 @@ services:
        - "8100:80"
       networks:
        phpnetwork:
-<<<<<<< HEAD
-<<<<<<< HEAD
          ipv4_address: 172.30.5.6
          
-      db:
-       image: mysql:5.7
-       volumes:
-        - /var/lib/mysql
-       environment:
-        - MYSQL_ROOT_PASSWORD=projeto
-        - MYSQL_DATABASE=projeto
-         
-=======
-=======
->>>>>>> parent of acfb359... Projeto funcionando
-         ipv4_address: 172.30.5.5
+#      db:
+#       image: mysql:5.7
+#       volumes:
+#        - /var/lib/mysql
+#       environment:
+#        - MYSQL_ROOT_PASSWORD=projeto
+#        - MYSQL_DATABASE=projeto
+#         ipv4_address: 172.30.5.5
 
->>>>>>> parent of acfb359... Projeto funcionando
 networks:
  phpnetwork:
   driver: bridge
