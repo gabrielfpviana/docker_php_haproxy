@@ -4,7 +4,6 @@ services:
       build: .
       ports:
        - "81:80"
-       - "443:443"
       volumes:
        - ./www:/var/www/html
 #      links:
@@ -17,7 +16,6 @@ services:
       build: .
       ports:
        - "82:80"
-       - "443:443"
       volumes:
        - ./www:/var/www/html
 #      links:
@@ -30,7 +28,6 @@ services:
       build: .
       ports:
        - "83:80"
-       - "443:443"
       volumes:
        - ./www:/var/www/html
 #      links:
