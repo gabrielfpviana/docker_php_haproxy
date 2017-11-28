@@ -24,7 +24,7 @@
 define( 'DB_NAME', 'projetomod4' );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'admin' );
+define( 'DB_USER', 'root' );
 
 /** Senha do banco de dados MySQL */
 define( 'DB_PASSWORD', 'projeto' );
@@ -51,14 +51,15 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'coloque a sua frase única aqui' );
-define( 'SECURE_AUTH_KEY',  'coloque a sua frase única aqui' );
-define( 'LOGGED_IN_KEY',    'coloque a sua frase única aqui' );
-define( 'NONCE_KEY',        'coloque a sua frase única aqui' );
-define( 'AUTH_SALT',        'coloque a sua frase única aqui' );
-define( 'SECURE_AUTH_SALT', 'coloque a sua frase única aqui' );
-define( 'LOGGED_IN_SALT',   'coloque a sua frase única aqui' );
-define( 'NONCE_SALT',       'coloque a sua frase única aqui' );
+
+define('AUTH_KEY',         'h51lb+ma~r0o5QqZ$0Xmzqt<Bo:}kIp{bOrv)WuYU3=S[|R[!-}!aV0#r/I9n0%}');
+define('SECURE_AUTH_KEY',  'PxpWvQwbALCk}`; ^eH7=Pd[s:=&mRIOP ){<U7@#{c]:,lvx+]b2f+Jz}>e%!iR');
+define('LOGGED_IN_KEY',    '2*~};{/`~Yw&&l|!MQ,R}Jh>d|+zBDp}_,co(5Z&%.[{(Idub*?Rpg6R|%|8*g),');
+define('NONCE_KEY',        '}:aF&{sbm!x26{Sl&IEeqg<|@(IR])C_,,(r%lJhsc%<BPYaL3^`N|91O9!h^.=A');
+define('AUTH_SALT',        '$-O9p$bh`;9ADb~+)%~O9RL:J.1`N:F9r^+ l@vX 1hoSx$z$z^+&)gKuc{z?Ait');
+define('SECURE_AUTH_SALT', '5_W=2rET{myx0?mMg_LVYLH46usY9SsB?:~}/|;NX)&2x:2PO)9S/+zm|u2`0#@&');
+define('LOGGED_IN_SALT',   '[$O-6+Jae8z1-f`p8H.+}vfKi0h%y6w7D3}^Tm}A*Tem`|!{8P|%Kd>+ExNOA_$>');
+define('NONCE_SALT',       'VN)Q_!J/tQCc$eDA~mxq <G`| _h@A,6lLrrp+Nl+Q>}w@<gN(O-ADu/%D~c=EuC');
 
 /**#@-*/
 
